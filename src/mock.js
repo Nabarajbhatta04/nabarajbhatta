@@ -7,14 +7,14 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/nabaraj-bhatta-73912325a",
   github: "https://github.com/Nabarajbhatta04",
   profileImage: "/images/my-profile2.jpg",
-  resumeUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+  resumeUrl: "/images/resume.pdf"
 };
 
 export const aboutInfo = {
   description: "I am a dedicated Frontend Developer who loves building modern, user-friendly websites. I focus on creating responsive interfaces and enjoy using the latest tools and technologies to make web applications look great and work smoothly.",
   skills: [
     { name: "React", percentage: 75 },
-    { name: "HTML5 & CSS3", percentage: 85 },
+    { name: "HTML & CSS", percentage: 85 },
     { name: "Tailwind CSS", percentage: 79 },
     { name: "Responsive Design", percentage: 75 },
     { name: "Git & GitHub", percentage: 70 },

@@ -26,7 +26,7 @@ const Portfolio = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       const result = await submitContactForm(formData);
       toast({
@@ -91,10 +91,10 @@ const Portfolio = () => {
             <div className={`flex-1 flex justify-center transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="relative">
                 <div className="absolute inset-0 bg-blue-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-                <img 
-                  src={personalInfo.profileImage} 
+                <img
+                  src={personalInfo.profileImage}
                   alt={personalInfo.name}
-                  className="relative w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full object-cover border-4 sm:border-8 border-white shadow-2xl"
+                  className=" mx-auto relative w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full object-cover border-4 sm:border-8 border-white shadow-2xl"
                 />
               </div>
             </div>
@@ -107,7 +107,7 @@ const Portfolio = () => {
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
           <div className="w-20 h-1 bg-blue-600 mb-8"></div>
-          
+
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">{aboutInfo.description}</p>
@@ -118,14 +118,14 @@ const Portfolio = () => {
                 </Button>
               </a>
             </div>
-            
+
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">Skills & Technologies</h3>
               <div className="space-y-5">
                 {aboutInfo.skills.map((skill, index) => {
                   const skillName = typeof skill === 'object' ? skill.name : skill;
                   const skillPercentage = typeof skill === 'object' ? skill.percentage : 0;
-                  
+
                   return (
                     <div key={index} className="w-full">
                       <div className="flex justify-between items-center mb-2">
@@ -133,7 +133,7 @@ const Portfolio = () => {
                         <span className="text-gray-900 font-medium text-base">{skillPercentage}%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
-                        <div 
+                        <div
                           className="bg-blue-600 h-full rounded-full transition-all duration-1000 ease-out"
                           style={{ width: `${skillPercentage}%` }}
                         ></div>
@@ -156,7 +156,7 @@ const Portfolio = () => {
                 <CardDescription>Writing maintainable, efficient, and well-documented code following best practices.</CardDescription>
               </CardContent>
             </Card>
-            
+
             <Card className="border-blue-200 hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Palette className="h-12 w-12 text-blue-600 mb-4" />
@@ -166,7 +166,7 @@ const Portfolio = () => {
                 <CardDescription>Creating beautiful, intuitive interfaces with attention to detail and user experience.</CardDescription>
               </CardContent>
             </Card>
-            
+
             <Card className="border-blue-200 hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Layers className="h-12 w-12 text-blue-600 mb-4" />
@@ -185,13 +185,13 @@ const Portfolio = () => {
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
           <div className="w-20 h-1 bg-blue-600 mb-12"></div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <Card key={project.id} className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-0">
                 <div className="relative h-48 overflow-hidden bg-gray-200">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                   />
@@ -207,8 +207,8 @@ const Portfolio = () => {
                     ))}
                   </div>
                   <div className="flex gap-3">
-                    <Button 
-                      size="sm" 
+                    <Button
+                      size="sm"
                       className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
                       onClick={() => project.previewImages && setSelectedProject(project)}
                     >
@@ -233,14 +233,14 @@ const Portfolio = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
           <div className="w-20 h-1 bg-blue-600 mb-8"></div>
           <p className="text-lg text-gray-600 mb-12">Have a question or want to work together? Feel free to reach out!</p>
-          
+
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <Input 
+                  <Input
                     name="name"
-                    placeholder="Your Name" 
+                    placeholder="Your Name"
                     value={formData.name}
                     onChange={handleInputChange}
                     required
@@ -248,10 +248,10 @@ const Portfolio = () => {
                   />
                 </div>
                 <div>
-                  <Input 
+                  <Input
                     name="email"
-                    type="email" 
-                    placeholder="Your Email" 
+                    type="email"
+                    placeholder="Your Email"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
@@ -259,9 +259,9 @@ const Portfolio = () => {
                   />
                 </div>
                 <div>
-                  <Textarea 
+                  <Textarea
                     name="message"
-                    placeholder="Your Message" 
+                    placeholder="Your Message"
                     rows={5}
                     value={formData.message}
                     onChange={handleInputChange}
@@ -269,8 +269,8 @@ const Portfolio = () => {
                     className="border-gray-300"
                   />
                 </div>
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                   disabled={isSubmitting}
                 >
@@ -278,10 +278,10 @@ const Portfolio = () => {
                 </Button>
               </form>
             </div>
-            
+
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">Connect With Me</h3>
-              
+
               <a href={`mailto:${personalInfo.email}`} className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group">
                 <div className="bg-blue-600 p-3 rounded-full group-hover:bg-blue-700 transition-colors">
                   <Mail className="h-6 w-6 text-white" />
@@ -291,7 +291,7 @@ const Portfolio = () => {
                   <div className="text-gray-600">{personalInfo.email}</div>
                 </div>
               </a>
-              
+
               <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group">
                 <div className="bg-blue-600 p-3 rounded-full group-hover:bg-blue-700 transition-colors">
                   <Linkedin className="h-6 w-6 text-white" />
@@ -301,7 +301,7 @@ const Portfolio = () => {
                   <div className="text-gray-600">Connect with me</div>
                 </div>
               </a>
-              
+
               <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group">
                 <div className="bg-blue-600 p-3 rounded-full group-hover:bg-blue-700 transition-colors">
                   <Github className="h-6 w-6 text-white" />
@@ -328,8 +328,8 @@ const Portfolio = () => {
             <div className="space-y-1">
               {selectedProject?.previewImages?.map((image, index) => (
                 <div key={index} className="w-full">
-                  <img 
-                    src={image} 
+                  <img
+                    src={image}
                     alt={`${selectedProject?.title} preview ${index + 1}`}
                     className="w-full h-auto object-cover"
                   />
