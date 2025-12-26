@@ -29,7 +29,7 @@ export const projects = [
     title: "Star Hair Saloon Website",
     description:
       "A modern, responsive website for a hair salon featuring booking system, gallery, and service information. Built with React and modern UI components.",
-    image: "/images/salon1.PNG",
+    image: "/images/salonn.PNG",
     demoUrl: "#",
     githubUrl: "https://github.com/Nerrybhatt",
     technologies: ["HTML", "CSS", "JavaScript"],
